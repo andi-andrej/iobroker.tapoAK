@@ -319,37 +319,33 @@ class Tapo extends utils.Adapter {
             },
             native: {},
           });
-
+             //original AK
+            //const remoteArray = [
+            //{ command: "refresh", name: "True = Refresh" },
+            //{ command: "setPowerState", name: "True = On, False = Off" },
+            //{ command: "setAlertConfig", name: "True = On, False = Off" },
+            //{ command: "setLensMaskConfig", name: "True = On, False = Off" },
+           // { command: "setForceWhitelampState", name: "True = On, False = Off" },
+           // { command: "moveMotor", name: "move Camera to X (-360,360), Y(-45,45)", type: "string", def: "0, 0", role: "text" },
+           // { command: "moveMotorStep", name: "Angle (0-360)", type: "string", def: "180", role: "text" },
+           // { command: "setBrightness", name: "Set Brightness for Light devices", type: "number", role: "level.brightness", def: 5, },
+            //{ command: "setColorTemp", name: "Set Color Temp for Light devices", type: "number", role: "level.color.temperature", def: 3000, },
+           // { command: "setColor", name: "Set Color for Light devices (hue, saturation)", def: "30, 100", type: "string", },
+          //];
+          
           const remoteArray = [
-            { command: "refresh", name: "True = Refresh" },
+            //{ command: "refresh", name: "True = Refresh" },
             { command: "setPowerState", name: "True = On, False = Off" },
-            { command: "setAlertConfig", name: "True = On, False = Off" },
-            { command: "setLensMaskConfig", name: "True = On, False = Off" },
-            { command: "setForceWhitelampState", name: "True = On, False = Off" },
-            { command: "moveMotor", name: "move Camera to X (-360,360), Y(-45,45)", type: "string", def: "0, 0", role: "text" },
-            { command: "moveMotorStep", name: "Angle (0-360)", type: "string", def: "180", role: "text" },
-
-            {
-              command: "setBrightness",
-              name: "Set Brightness for Light devices",
-              type: "number",
-              role: "level.brightness",
-              def: 5,
-            },
-            {
-              command: "setColorTemp",
-              name: "Set Color Temp for Light devices",
-              type: "number",
-              role: "level.color.temperature",
-              def: 3000,
-            },
-            {
-              command: "setColor",
-              name: "Set Color for Light devices (hue, saturation)",
-              def: "30, 100",
-              type: "string",
-            },
+            //{ command: "setAlertConfig", name: "True = On, False = Off" },
+            //{ command: "setLensMaskConfig", name: "True = On, False = Off" },
+            //{ command: "setForceWhitelampState", name: "True = On, False = Off" },
+            //{ command: "moveMotor", name: "move Camera to X (-360,360), Y(-45,45)", type: "string", def: "0, 0", role: "text" },
+            //{ command: "moveMotorStep", name: "Angle (0-360)", type: "string", def: "180", role: "text" },
+            //{ command: "setBrightness", name: "Set Brightness for Light devices", type: "number", role: "level.brightness", def: 5, },
+            //{ command: "setColorTemp", name: "Set Color Temp for Light devices", type: "number", role: "level.color.temperature", def: 3000, },
+            //{ command: "setColor", name: "Set Color for Light devices (hue, saturation)", def: "30, 100", type: "string", },
           ];
+      
           remoteArray.forEach((remote) => {
             this.extendObject(id + ".remote." + remote.command, {
               type: "state",
